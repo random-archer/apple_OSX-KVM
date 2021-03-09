@@ -9,3 +9,9 @@ mac_hdd_ng.img
 *.smd
 *.dmg
 OVMF_VARS-1024x768.fd
+
+#
+#
+#
+
+a-work/
