@@ -1,2 +1,2 @@
 
-### required host system files
+### required host/linux system files
