@@ -1,0 +1,10 @@
+
+
+#
+# configure host/guest 9p sharing
+#
+# https://wiki.qemu.org/Documentation/9psetup
+# https://www.kraxel.org/blog/2019/06/macos-qemu-guest
+#
+
+HomeWork        /private/home_work      9p

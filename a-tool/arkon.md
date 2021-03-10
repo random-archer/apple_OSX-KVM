@@ -17,36 +17,38 @@ aur uml_utilities
 
 git clone https://github.com/kholia/OSX-KVM.git
 
-cd OSX-KVM
 
-python fetch-macOS.py
+### fetch
 
-* setup ok: select " 3    041-91758    10.13.6  2019-10-19  macOS High Sierra"
+./a-tool/fetch-10.14.6.sh
 
-qemu-img convert BaseSystem.dmg -O raw BaseSystem.img
+### launch
 
-qemu-img create -f qcow2 mac_hdd_ng.img 128G
+./a-tool/launch-10.14.6.sh
 
-./OpenCore-Boot.sh
+### 9p setup
 
-### usb path through
+#### issue on host:
 
-===
+make qemu user member of group work with gid 2000 
 
-https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF
- 
-provide /etc/modprobe.d/vfio.conf
+#### issue on guest:
+
+make login user member of group work with gid 2000 
 ```
-options vfio-pci ids=8086:8d2d
+dscl . create /Groups/work gid 2000
+dscl . append /Groups/work GroupMembership $USER
 ```
 
+provision special mount point for 9p share
 
+```
+mkdir -p /private/home_work
+chown root:work /private/home_work
+mount -t 9p HomeWork /private/home_work
+ls -las /Volumes/HomeWork
+```
 
-
-https://github.com/kholia/OSX-KVM/blob/master/notes.md#usb-passthrough-notes
-
-* front panel usb 2.0
-
-lspci -nn|grep USB
-00:1a.0 USB controller [0c03]: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 [8086:8d2d] (rev 05)
-
+ensure mount 9p on boot, see: 
+* host.root/etc/fstab
+* host.root/etc/rc.server

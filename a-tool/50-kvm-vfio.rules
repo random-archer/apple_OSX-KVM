@@ -1,7 +1,0 @@
-
-#
-# esure /dev/vfio/* is granted to qemu group
-#
-
-SUBSYSTEM=="vfio", OWNER="root", GROUP="kvm"
-

@@ -1,0 +1,10 @@
+
+#
+# add to /etc/udef/rules.d
+#
+#
+# to esure /dev/vfio/* access is granted to qemu group
+#
+
+SUBSYSTEM=="vfio", OWNER="root", GROUP="kvm"
+

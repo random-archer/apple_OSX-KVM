@@ -6,31 +6,27 @@ version="10.14.6"
 
 base_dir=$( cd $( dirname "$0" )/.. && pwd )
 macos_dir="$base_dir/a-work/macos_$version"
+
+# loader storage
 install_media="$macos_dir/BaseSystem.img"
 
+# system storage
 main_disk="/dev/disk/by-id/ata-ST9500420AS_5VJD6FV1"
+
+# xcode download storage 
 data_disk="/dev/disk/by-id/ata-ST9500420AS_5VJBYL2P"
 
 cd $base_dir
 
-# Special thanks to:
-# https://github.com/Leoyzen/KVM-Opencore
-# https://github.com/thenickdude/KVM-Opencore/
-# https://github.com/qemu/qemu/blob/master/docs/usb2.txt
-#
-# qemu-img create -f qcow2 mac_hdd_ng.img 128G
-#
-# echo 1 > /sys/module/kvm/parameters/ignore_msrs (this is required)
-
-############################################################################
-# NOTE: Tweak the "MY_OPTIONS" line in case you are having booting problems!
-############################################################################
 
 #
+# pass thru support for ehci-pic usb controller
+#   lspci | grep -i usb
 # 00:1a.0 USB controller [0c03]: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 [8086:8d2d] (rev 05)
 #
 usb_ctrl_addr="00:1a.0"
 
+# vfio driver switch support
 manage_driver() {
     local addr="0000:$1"
     local name="$2"
@@ -55,25 +51,41 @@ manage_driver() {
     esac
 }
 
-device_expose() {
+# switch driver to guest
+driver_expose() {
     manage_driver $usb_ctrl_addr ehci-pci unbind
     manage_driver $usb_ctrl_addr vfio-pci bind
 }
 
 
-device_restore() {
+# switch driver to host
+driver_restore() {
     manage_driver $usb_ctrl_addr vfio-pci unbind
     manage_driver $usb_ctrl_addr ehci-pci bind
 }
 
-#trap device_restore EXIT
-#device_expose
+trap driver_restore EXIT
+driver_expose
 
+# verify vfio device access by kvm group
 ls -las /dev/vfio/
 
 #
 #
 #
+
+# Special thanks to:
+# https://github.com/Leoyzen/KVM-Opencore
+# https://github.com/thenickdude/KVM-Opencore/
+# https://github.com/qemu/qemu/blob/master/docs/usb2.txt
+#
+# qemu-img create -f qcow2 mac_hdd_ng.img 128G
+#
+# echo 1 > /sys/module/kvm/parameters/ignore_msrs (this is required)
+
+############################################################################
+# NOTE: Tweak the "MY_OPTIONS" line in case you are having booting problems!
+############################################################################
 
 MY_OPTIONS="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
 
@@ -113,32 +125,44 @@ args=(
   -device ich9-intel-hda -device hda-duplex
   -device ich9-ahci,id=sata
   
-  # pass thru
-  #     00:1a.0 USB controller [0c03]: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 [8086:8d2d] (rev 05)
-  #-device vfio-pci,host=$usb_ctrl_addr
+  # enable pass thru support
+  -device vfio-pci,host=$usb_ctrl_addr
   
-  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
-  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
+  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
+  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
   -device ide-hd,bus=sata.2,drive=OpenCoreBoot
   
+  # skip: enabe only during reinstall
   #-device ide-hd,bus=sata.3,drive=InstallMedia
   #-drive id=InstallMedia,if=none,file="$install_media",format=raw
   
+  # provides configured system
   -drive id=MainDisk,if=none,file="$main_disk",format=raw
   -device ide-hd,bus=sata.4,drive=MainDisk
   
+  # provides development storage
   -drive id=DataDisk,if=none,file="$data_disk",format=raw
   -device ide-hd,bus=sata.5,drive=DataDisk
   
-  # -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27
-  -netdev user,id=net0 -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c8:18:28
+  # skip: no host access for ssh
+  #-netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27
+  #-netdev user,id=net0 -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c8:18:28
   
+  # provides full network bridge with host access via ssh
+  -netdev bridge,id=br0,br=virbr0,helper=/usr/lib/qemu/qemu-bridge-helper
+  -device vmxnet3,netdev=br0,id=net0,mac=52:54:00:c8:18:28
+  
+  # skip: bugs with resolution
   #-device VGA,vgamem_mb=128
-  
+
+  # provides display rescale on demand
   -device virtio-vga
   
-  #-device virtio-vga,virgl=on
-  #-display gtk,gl=on
+  # provides shared folder via 9p 
+  # https://wiki.qemu.org/Documentation/9psetup
+  # https://www.kraxel.org/blog/2019/06/macos-qemu-guest
+  -fsdev local,id=home_work,path=/home/work,security_model=none
+  -device virtio-9p-pci,fsdev=home_work,mount_tag=HomeWork
 
   -monitor stdio
   
