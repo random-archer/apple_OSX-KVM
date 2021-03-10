@@ -7,6 +7,8 @@
 * hybernate: syspref -> enegry saver -> prevent sleep -> check 
 * auto-login: syspref -> users gruops -> automatic loggin -> select
 
+* update itunes for usb iphone auto connect 
+
 ### auto sudo
 
 https://apple.stackexchange.com/questions/257813/enable-sudo-without-a-password-on-macos
@@ -49,6 +51,14 @@ https://www.macports.org/install.php
 
 sudo port install mc
 sudo port install htop
+sudo port install usbutils
+
+### usb pass thru
+
+```
+lsusb
+Bus 004 Device 001: ID 8087:800a Intel Corp. 
+```
 
 ### kivy setup
 
