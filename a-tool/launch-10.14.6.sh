@@ -133,9 +133,14 @@ args=(
   # -netdev tap,id=net0,ifname=tap0,script=no,downscript=no -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c9:18:27
   -netdev user,id=net0 -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:c8:18:28
   
-  -monitor stdio
+  #-device VGA,vgamem_mb=128
   
-  -device VGA,vgamem_mb=128
+  -device virtio-vga
+  
+  #-device virtio-vga,virgl=on
+  #-display gtk,gl=on
+
+  -monitor stdio
   
 )
 
