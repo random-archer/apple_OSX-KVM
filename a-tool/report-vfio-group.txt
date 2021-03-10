@@ -1,0 +1,249 @@
+
+====================
+IOMMU Group 0:
+	ff:08.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f80] (rev 02)
+	ff:08.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f32] (rev 02)
+	ff:08.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f83] (rev 02)
+IOMMU Group 1:
+	ff:09.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f90] (rev 02)
+	ff:09.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f33] (rev 02)
+	ff:09.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f93] (rev 02)
+IOMMU Group 2:
+	ff:0b.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f81] (rev 02)
+	ff:0b.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f36] (rev 02)
+	ff:0b.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f37] (rev 02)
+IOMMU Group 3:
+	ff:0c.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe0] (rev 02)
+	ff:0c.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe1] (rev 02)
+	ff:0c.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe2] (rev 02)
+	ff:0c.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe3] (rev 02)
+	ff:0c.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe4] (rev 02)
+	ff:0c.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe5] (rev 02)
+	ff:0c.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe6] (rev 02)
+	ff:0c.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe7] (rev 02)
+IOMMU Group 4:
+	ff:0f.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Buffered Ring Agent [8086:2ff8] (rev 02)
+	ff:0f.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Buffered Ring Agent [8086:2ff9] (rev 02)
+	ff:0f.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffc] (rev 02)
+	ff:0f.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffd] (rev 02)
+	ff:0f.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffe] (rev 02)
+IOMMU Group 5:
+	ff:10.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCIe Ring Interface [8086:2f1d] (rev 02)
+	ff:10.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCIe Ring Interface [8086:2f34] (rev 02)
+	ff:10.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f1e] (rev 02)
+	ff:10.6 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f7d] (rev 02)
+	ff:10.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f1f] (rev 02)
+IOMMU Group 6:
+	ff:12.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Home Agent 0 [8086:2fa0] (rev 02)
+	ff:12.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Home Agent 0 [8086:2f30] (rev 02)
+IOMMU Group 7:
+	ff:13.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	ff:13.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	ff:13.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2faa] (rev 02)
+	ff:13.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fab] (rev 02)
+	ff:13.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fac] (rev 02)
+	ff:13.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fad] (rev 02)
+	ff:13.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Channel 0/1 Broadcast [8086:2fae] (rev 02)
+	ff:13.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Global Broadcast [8086:2faf] (rev 02)
+IOMMU Group 8:
+	ff:14.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 0 Thermal Control [8086:2fb0] (rev 02)
+	ff:14.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 1 Thermal Control [8086:2fb1] (rev 02)
+	ff:14.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 0 ERROR Registers [8086:2fb2] (rev 02)
+	ff:14.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 1 ERROR Registers [8086:2fb3] (rev 02)
+	ff:14.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbc] (rev 02)
+	ff:14.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbd] (rev 02)
+	ff:14.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbe] (rev 02)
+	ff:14.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbf] (rev 02)
+IOMMU Group 9:
+	ff:15.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 2 Thermal Control [8086:2fb4] (rev 02)
+	ff:15.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 3 Thermal Control [8086:2fb5] (rev 02)
+	ff:15.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 2 ERROR Registers [8086:2fb6] (rev 02)
+	ff:15.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 3 ERROR Registers [8086:2fb7] (rev 02)
+IOMMU Group 10:
+	ff:16.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 1 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	ff:16.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Channel 2/3 Broadcast [8086:2f6e] (rev 02)
+	ff:16.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Global Broadcast [8086:2f6f] (rev 02)
+IOMMU Group 11:
+	ff:17.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 1 Channel 0 Thermal Control [8086:2fd0] (rev 02)
+	ff:17.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fb8] (rev 02)
+	ff:17.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fb9] (rev 02)
+	ff:17.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fba] (rev 02)
+	ff:17.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fbb] (rev 02)
+IOMMU Group 12:
+	ff:1e.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f98] (rev 02)
+	ff:1e.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f99] (rev 02)
+	ff:1e.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f9a] (rev 02)
+	ff:1e.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2fc0] (rev 02)
+	ff:1e.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f9c] (rev 02)
+IOMMU Group 13:
+	ff:1f.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 VCU [8086:2f88] (rev 02)
+	ff:1f.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 VCU [8086:2f8a] (rev 02)
+IOMMU Group 14:
+	7f:08.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f80] (rev 02)
+	7f:08.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f32] (rev 02)
+	7f:08.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 0 [8086:2f83] (rev 02)
+IOMMU Group 15:
+	7f:09.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f90] (rev 02)
+	7f:09.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f33] (rev 02)
+	7f:09.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 QPI Link 1 [8086:2f93] (rev 02)
+IOMMU Group 16:
+	7f:0b.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f81] (rev 02)
+	7f:0b.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f36] (rev 02)
+	7f:0b.2 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 R3 QPI Link 0 & 1 Monitoring [8086:2f37] (rev 02)
+IOMMU Group 17:
+	7f:0c.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe0] (rev 02)
+	7f:0c.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe1] (rev 02)
+	7f:0c.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe2] (rev 02)
+	7f:0c.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe3] (rev 02)
+	7f:0c.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe4] (rev 02)
+	7f:0c.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe5] (rev 02)
+	7f:0c.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe6] (rev 02)
+	7f:0c.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Unicast Registers [8086:2fe7] (rev 02)
+IOMMU Group 18:
+	7f:0f.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Buffered Ring Agent [8086:2ff8] (rev 02)
+	7f:0f.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Buffered Ring Agent [8086:2ff9] (rev 02)
+	7f:0f.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffc] (rev 02)
+	7f:0f.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffd] (rev 02)
+	7f:0f.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 System Address Decoder & Broadcast Registers [8086:2ffe] (rev 02)
+IOMMU Group 19:
+	7f:10.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCIe Ring Interface [8086:2f1d] (rev 02)
+	7f:10.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCIe Ring Interface [8086:2f34] (rev 02)
+	7f:10.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f1e] (rev 02)
+	7f:10.6 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f7d] (rev 02)
+	7f:10.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Scratchpad & Semaphore Registers [8086:2f1f] (rev 02)
+IOMMU Group 20:
+	7f:12.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Home Agent 0 [8086:2fa0] (rev 02)
+	7f:12.1 Performance counters [1101]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Home Agent 0 [8086:2f30] (rev 02)
+IOMMU Group 21:
+	7f:13.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	7f:13.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	7f:13.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2faa] (rev 02)
+	7f:13.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fab] (rev 02)
+	7f:13.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fac] (rev 02)
+	7f:13.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel Target Address Decoder [8086:2fad] (rev 02)
+	7f:13.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Channel 0/1 Broadcast [8086:2fae] (rev 02)
+	7f:13.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Global Broadcast [8086:2faf] (rev 02)
+IOMMU Group 22:
+	7f:14.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 0 Thermal Control [8086:2fb0] (rev 02)
+	7f:14.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 1 Thermal Control [8086:2fb1] (rev 02)
+	7f:14.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 0 ERROR Registers [8086:2fb2] (rev 02)
+	7f:14.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 1 ERROR Registers [8086:2fb3] (rev 02)
+	7f:14.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbc] (rev 02)
+	7f:14.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbd] (rev 02)
+	7f:14.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbe] (rev 02)
+	7f:14.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 0 & 1 [8086:2fbf] (rev 02)
+IOMMU Group 23:
+	7f:15.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 2 Thermal Control [8086:2fb4] (rev 02)
+	7f:15.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 3 Thermal Control [8086:2fb5] (rev 02)
+	7f:15.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 2 ERROR Registers [8086:2fb6] (rev 02)
+	7f:15.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 0 Channel 3 ERROR Registers [8086:2fb7] (rev 02)
+IOMMU Group 24:
+	7f:16.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 1 Target Address, Thermal & RAS Registers [8086... (rev 02)
+	7f:16.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Channel 2/3 Broadcast [8086:2f6e] (rev 02)
+	7f:16.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO Global Broadcast [8086:2f6f] (rev 02)
+IOMMU Group 25:
+	7f:17.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Integrated Memory Controller 1 Channel 0 Thermal Control [8086:2fd0] (rev 02)
+	7f:17.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fb8] (rev 02)
+	7f:17.5 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fb9] (rev 02)
+	7f:17.6 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fba] (rev 02)
+	7f:17.7 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DDRIO (VMSE) 2 & 3 [8086:2fbb] (rev 02)
+IOMMU Group 26:
+	7f:1e.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f98] (rev 02)
+	7f:1e.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f99] (rev 02)
+	7f:1e.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f9a] (rev 02)
+	7f:1e.3 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2fc0] (rev 02)
+	7f:1e.4 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Power Control Unit [8086:2f9c] (rev 02)
+IOMMU Group 27:
+	7f:1f.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 VCU [8086:2f88] (rev 02)
+	7f:1f.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 VCU [8086:2f8a] (rev 02)
+IOMMU Group 28:
+	00:00.0 Host bridge [0600]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 DMI2 [8086:2f00] (rev 02)
+IOMMU Group 29:
+	00:01.0 PCI bridge [0604]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCI Express Root Port 1 [8086:2f02] (rev 02)
+IOMMU Group 30:
+	00:01.1 PCI bridge [0604]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCI Express Root Port 1 [8086:2f03] (rev 02)
+IOMMU Group 31:
+	00:03.0 PCI bridge [0604]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCI Express Root Port 3 [8086:2f08] (rev 02)
+IOMMU Group 32:
+	00:05.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Address Map, VTd_Misc, System Management [8086:2f28] (rev 02)
+IOMMU Group 33:
+	00:05.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Hot Plug [8086:2f29] (rev 02)
+IOMMU Group 34:
+	00:05.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 RAS, Control Status and Global Errors [8086:2f2a] (rev 02)
+IOMMU Group 35:
+	00:05.4 PIC [0800]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 I/O APIC [8086:2f2c] (rev 02)
+IOMMU Group 36:
+	00:11.0 Unassigned class [ff00]: Intel Corporation C610/X99 series chipset SPSR [8086:8d7c] (rev 05)
+IOMMU Group 37:
+	00:11.4 SATA controller [0106]: Intel Corporation C610/X99 series chipset sSATA Controller [AHCI mode] [8086:8d62] (rev 05)
+IOMMU Group 38:
+	00:16.0 Communication controller [0780]: Intel Corporation C610/X99 series chipset MEI Controller #1 [8086:8d3a] (rev 05)
+	00:16.1 Communication controller [0780]: Intel Corporation C610/X99 series chipset MEI Controller #2 [8086:8d3b] (rev 05)
+IOMMU Group 39:
+	00:1a.0 USB controller [0c03]: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #2 [8086:8d2d] (rev 05)
+IOMMU Group 40:
+	00:1b.0 Audio device [0403]: Intel Corporation C610/X99 series chipset HD Audio Controller [8086:8d20] (rev 05)
+IOMMU Group 41:
+	00:1c.0 PCI bridge [0604]: Intel Corporation C610/X99 series chipset PCI Express Root Port #1 [8086:8d10] (rev d5)
+IOMMU Group 42:
+	00:1c.2 PCI bridge [0604]: Intel Corporation C610/X99 series chipset PCI Express Root Port #3 [8086:8d14] (rev d5)
+IOMMU Group 43:
+	00:1c.3 PCI bridge [0604]: Intel Corporation C610/X99 series chipset PCI Express Root Port #4 [8086:8d16] (rev d5)
+IOMMU Group 44:
+	00:1c.4 PCI bridge [0604]: Intel Corporation C610/X99 series chipset PCI Express Root Port #5 [8086:8d18] (rev d5)
+IOMMU Group 45:
+	00:1c.7 PCI bridge [0604]: Intel Corporation C610/X99 series chipset PCI Express Root Port #8 [8086:8d1e] (rev d5)
+IOMMU Group 46:
+	00:1d.0 USB controller [0c03]: Intel Corporation C610/X99 series chipset USB Enhanced Host Controller #1 [8086:8d26] (rev 05)
+IOMMU Group 47:
+	00:1f.0 ISA bridge [0601]: Intel Corporation C610/X99 series chipset LPC Controller [8086:8d44] (rev 05)
+	00:1f.2 SATA controller [0106]: Intel Corporation C610/X99 series chipset 6-Port SATA Controller [AHCI mode] [8086:8d02] (rev 05)
+	00:1f.3 SMBus [0c05]: Intel Corporation C610/X99 series chipset SMBus Controller [8086:8d22] (rev 05)
+IOMMU Group 48:
+	02:00.0 USB controller [0c03]: ASMedia Technology Inc. ASM1042A USB 3.0 Host Controller [1b21:1142]
+IOMMU Group 49:
+	05:00.0 Ethernet controller [0200]: Intel Corporation I210 Gigabit Network Connection [8086:1533] (rev 03)
+IOMMU Group 50:
+	06:00.0 Ethernet controller [0200]: Intel Corporation I210 Gigabit Network Connection [8086:1533] (rev 03)
+IOMMU Group 51:
+	07:00.0 SATA controller [0106]: ASMedia Technology Inc. ASM1062 Serial ATA Controller [1b21:0612] (rev 02)
+IOMMU Group 52:
+	08:00.0 PCI bridge [0604]: ASPEED Technology, Inc. AST1150 PCI-to-PCI Bridge [1a03:1150] (rev 03)
+	09:00.0 VGA compatible controller [0300]: ASPEED Technology, Inc. ASPEED Graphics Family [1a03:2000] (rev 30)
+IOMMU Group 53:
+	80:02.0 PCI bridge [0604]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 PCI Express Root Port 2 [8086:2f04] (rev 02)
+IOMMU Group 54:
+	80:05.0 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Address Map, VTd_Misc, System Management [8086:2f28] (rev 02)
+IOMMU Group 55:
+	80:05.1 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 Hot Plug [8086:2f29] (rev 02)
+IOMMU Group 56:
+	80:05.2 System peripheral [0880]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 RAS, Control Status and Global Errors [8086:2f2a] (rev 02)
+IOMMU Group 57:
+	80:05.4 PIC [0800]: Intel Corporation Xeon E7 v3/Xeon E5 v3/Core i7 I/O APIC [8086:2f2c] (rev 02)
+IOMMU Group 58:
+	81:00.0 VGA compatible controller [0300]: NVIDIA Corporation GM204 [GeForce GTX 970] [10de:13c2] (rev a1)
+	81:00.1 Audio device [0403]: NVIDIA Corporation GM204 High Definition Audio Controller [10de:0fbb] (rev a1)
+====================
+Bus 2 --> 0000:00:1d.0 (IOMMU group 46)
+Bus 002 Device 008: ID 174c:2074 ASMedia Technology Inc. ASM1074 High-Speed hub
+Bus 002 Device 006: ID 1a7c:0192 Evoluent Evoluent VerticalMouse 4
+Bus 002 Device 005: ID 1a7c:0191 Evoluent VerticalMouse 4
+Bus 002 Device 007: ID 05f3:0007 PI Engineering, Inc. Kinesis Advantage PRO MPC/USB Keyboard
+Bus 002 Device 004: ID 05f3:0081 PI Engineering, Inc. Kinesis Integrated Hub
+Bus 002 Device 003: ID 051d:0002 American Power Conversion Uninterruptible Power Supply
+Bus 002 Device 002: ID 8087:8002 Intel Corp. 8 channel internal hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+Bus 3 --> 0000:02:00.0 (IOMMU group 48)
+Bus 003 Device 003: ID 05e3:0608 Genesys Logic, Inc. Hub
+Bus 003 Device 002: ID 0424:2514 Microchip Technology, Inc. (formerly SMSC) USB 2.0 Hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+Bus 4 --> 0000:02:00.0 (IOMMU group 48)
+Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+
+====================
+81:00.0 VGA compatible controller [0300]: NVIDIA Corporation GM204 [GeForce GTX 970] [10de:13c2] (rev a1)
+	Subsystem: ASUSTeK Computer Inc. Device [1043:8508]
+	Kernel driver in use: nvidia
+	Kernel modules: nouveau, nvidia_drm, nvidia
