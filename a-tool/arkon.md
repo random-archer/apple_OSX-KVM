@@ -36,8 +36,10 @@ make qemu user member of group work with gid 2000
 
 make login user member of group work with gid 2000 
 ```
-sudo dscl . create /Groups/work gid 2000
-sudo dscl . append /Groups/work GroupMembership $USER
+sudo dscl . create /Groups/work1 gid 1000
+sudo dscl . create /Groups/work2 gid 2000
+sudo dscl . append /Groups/work1 GroupMembership $USER
+sudo dscl . append /Groups/work2 GroupMembership $USER
 ```
 
 provision special mount point for 9p share

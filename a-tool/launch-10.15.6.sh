@@ -162,6 +162,7 @@ args=(
   # provides shared folder via 9p 
   # https://wiki.qemu.org/Documentation/9psetup
   # https://www.kraxel.org/blog/2019/06/macos-qemu-guest
+  #-fsdev local,id=home_work,path=/home/work,security_model=mapped,dmode=0775,fmode=0664
   -fsdev local,id=home_work,path=/home/work,security_model=none
   -device virtio-9p-pci,fsdev=home_work,mount_tag=HomeWork
 
@@ -170,4 +171,3 @@ args=(
 )
 
 qemu-system-x86_64 "${args[@]}"
-
