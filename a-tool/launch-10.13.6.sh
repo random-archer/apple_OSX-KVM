@@ -8,7 +8,7 @@ base_dir=$( cd $( dirname "$0" )/.. && pwd )
 macos_dir="$base_dir/a-work/macos_$version"
 install_media="$macos_dir/BaseSystem.img"
 
-main_disk="/dev/disk/by-id/ata-ST9500420AS_5VJD5TJD"
+main_disk="/dev/disk/by-id/XXX"
 data_disk="/dev/disk/by-id/ata-ST9500420AS_5VJBYL2P"
 
 cd $base_dir

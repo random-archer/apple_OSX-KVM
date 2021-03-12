@@ -20,11 +20,11 @@ git clone https://github.com/kholia/OSX-KVM.git
 
 ### fetch
 
-./a-tool/fetch-10.14.6.sh
+./a-tool/fetch-10.15.6.sh
 
 ### launch
 
-./a-tool/launch-10.14.6.sh
+./a-tool/launch-10.15.6.sh
 
 ### 9p setup
 
@@ -36,8 +36,8 @@ make qemu user member of group work with gid 2000
 
 make login user member of group work with gid 2000 
 ```
-dscl . create /Groups/work gid 2000
-dscl . append /Groups/work GroupMembership $USER
+sudo dscl . create /Groups/work gid 2000
+sudo dscl . append /Groups/work GroupMembership $USER
 ```
 
 provision special mount point for 9p share

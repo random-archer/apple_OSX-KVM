@@ -7,13 +7,7 @@
 * hybernate: syspref -> enegry saver -> prevent sleep -> check 
 * auto-login: syspref -> users gruops -> automatic loggin -> select
 
-* update itunes for usb iphone auto connect 
-
-### auto sudo
-
-https://apple.stackexchange.com/questions/257813/enable-sudo-without-a-password-on-macos
-
-echo "%admin ALL=(ALL) NOPASSWD: ALL" > /private/etc/sudoers.d/auto-sudo
+* itunes for usb iphone auto connect (plug the phone to install)
 
 ### ssh key login
 
@@ -28,8 +22,14 @@ chmod -R go-rwx ~/.ssh
 
 on host
 ```
-cat ~/.ssh/id_rsa.pub | ssh username@server.dreamhost.com "cat >> ~/.ssh/authorized_keys"
+cat ~/.ssh/id_rsa.pub | ssh user0@xmac "cat >> ~/.ssh/authorized_keys"
 ```
+
+### auto sudo
+
+https://apple.stackexchange.com/questions/257813/enable-sudo-without-a-password-on-macos
+
+echo "%admin ALL=(ALL) NOPASSWD: ALL" > /private/etc/sudoers.d/auto-sudo
 
 ### xcode setup
 
