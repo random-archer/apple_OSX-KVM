@@ -86,12 +86,58 @@ ls -las /dev/vfio/
 # This script works for Big Sur, Catalina, Mojave, and High Sierra. Tested with
 # macOS 10.15.6, macOS 10.14.6, and macOS 10.13.6
 
-ALLOCATED_RAM="8196" # MiB
-CPU_SOCKETS="1"
-CPU_CORES="4"
-CPU_THREADS="8"
+MEM_SIZE="8196" # MiB
+CPU_SOCKETS="2"
+CPU_CORES="8"
+CPU_THREADS="16"
 
-CPU_OPTS="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+#CPU_OPTS="+pcid,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check"
+#CPU_OPTS="+pcid,+ssse3,+sse4.2,+aes,+xsave,+avx,+avx2,+xsaveopt,+bmi2,+smep,+bmi1,+fma,+movbe"
+
+flag_list=(
+
+aes
+
+avx
+avx2
+
+bmi1
+bmi2
+
+fma
+fpu
+
+lm
+
+movbe
+
+#pcid
+
+popcnt
+pse
+
+rdrand
+
+smep
+
+sse
+sse2
+sse4_1
+sse4_2
+ssse3
+
+xsave
+xsaveopt
+
+)
+
+CPU_OPTS=""
+
+for flag in ${flag_list[@]} ; do
+    CPU_OPTS="$CPU_OPTS+$flag,"
+done
+
+echo CPU_OPTS: $CPU_OPTS
 
 REPO_PATH="$base_dir"
 OVMF_DIR="$macos_dir"
@@ -99,21 +145,24 @@ OVMF_DIR="$macos_dir"
 # This causes high cpu usage on the *host* side
 # qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,hypervisor=off,vmx=on,kvm=off,$CPU_OPTS\
 
-# shellcheck disable=SC2054
 args=(
 
   -enable-kvm 
-  -m "$ALLOCATED_RAM" 
+  -machine q35,accel=kvm
   -cpu Penryn,kvm=on,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,$CPU_OPTS
   -smp "$CPU_THREADS",cores="$CPU_CORES",sockets="$CPU_SOCKETS"
-  -machine q35,accel=kvm
+  -m "$MEM_SIZE" 
   
+  -smbios type=2
   -device isa-applesmc,osk="ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
   -drive if=pflash,format=raw,readonly,file="$OVMF_DIR/OVMF_CODE.fd"
   -drive if=pflash,format=raw,file="$OVMF_DIR/OVMF_VARS-1024x768.fd"
-  -smbios type=2
   
-  -device ich9-intel-hda -device hda-duplex
+  -device virtio-rng-pci
+  
+  -device ich9-intel-hda 
+  -device hda-duplex
+   
   -device ich9-ahci,id=sata
   
   -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
