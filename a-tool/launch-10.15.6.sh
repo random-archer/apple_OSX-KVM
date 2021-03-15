@@ -145,7 +145,7 @@ OVMF_DIR="$macos_dir"
 # This causes high cpu usage on the *host* side
 # qemu-system-x86_64 -enable-kvm -m 3072 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,hypervisor=off,vmx=on,kvm=off,$CPU_OPTS\
 
-args=(
+qemu_args=(
 
   -enable-kvm 
   -machine q35,accel=kvm
@@ -165,13 +165,13 @@ args=(
    
   -device ich9-ahci,id=sata
   
-  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
-  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
+  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
+  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
   -device ide-hd,bus=sata.2,drive=OpenCoreBoot
   
   # skip: enabe only during reinstall
-  -device ide-hd,bus=sata.3,drive=InstallMedia
-  -drive id=InstallMedia,if=none,file="$install_media",format=raw
+  #-device ide-hd,bus=sata.3,drive=InstallMedia
+  #-drive id=InstallMedia,if=none,file="$install_media",format=raw
   
   # provides target system
   -drive id=MainDisk,if=none,file="$main_disk",format=raw
@@ -219,4 +219,4 @@ args=(
   
 )
 
-qemu-system-x86_64 "${args[@]}"
+qemu-system-x86_64 "${qemu_args[@]}"

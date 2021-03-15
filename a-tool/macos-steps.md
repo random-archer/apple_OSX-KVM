@@ -1,7 +1,8 @@
 
 ### system config
 
-* ssh: syspref -> remote login -> check
+* name: syspref -> sharing -> computer name 
+* ssh: syspref -> sharing -> remote login -> check
 * display: syspref -> screen saver -> start -> never
 * hybernate: syspref -> enegry saver -> turn display -> never 
 * hybernate: syspref -> enegry saver -> prevent sleep -> check 
@@ -65,3 +66,26 @@ on guest
 sudo port install mc
 sudo port install htop
 ```
+
+### google chrome
+
+download dmg
+
+### python 3
+
+download pkg
+run certificate install script 
+
+https://www.python.org/downloads/release/python-392/
+
+### plan 9 mount
+
+note: ensure same "work" group gid on host and guest
+
+sudo dscl . create /Groups/work gid 2000
+sudo dscl . append /Groups/work GroupMembership $USER
+echo "HomeWork /private/home_work 9p" | sudo cat > /etc/fstab
+sudo mkdir -p /private/home_work
+sudo chown $USER:work /private/home_work
+sudo mount_9p HomeWork
+ls -las /Volumes/HomeWork
