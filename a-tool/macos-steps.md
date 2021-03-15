@@ -1,13 +1,11 @@
 
-### system setup
+### system config
 
 * ssh: syspref -> remote login -> check
 * display: syspref -> screen saver -> start -> never
 * hybernate: syspref -> enegry saver -> turn display -> never 
 * hybernate: syspref -> enegry saver -> prevent sleep -> check 
 * auto-login: syspref -> users gruops -> automatic loggin -> select
-
-* itunes for usb iphone auto connect (plug the phone to install)
 
 ### ssh key login
 
@@ -29,9 +27,20 @@ cat ~/.ssh/id_rsa.pub | ssh user0@xmac "cat >> ~/.ssh/authorized_keys"
 
 https://apple.stackexchange.com/questions/257813/enable-sudo-without-a-password-on-macos
 
+
+on guest
+```
+sudo su
 echo "%admin ALL=(ALL) NOPASSWD: ALL" > /private/etc/sudoers.d/auto-sudo
+```
 
 ### xcode setup
+
+use app store
+
+
+### xcode setup
+
 
 https://developer.apple.com/download/
 
@@ -47,38 +56,12 @@ finish setup: invoke launcher -> xcode app
 
 ### ports setup
 
+download pkg
+
 https://www.macports.org/install.php
 
+on guest
+```
 sudo port install mc
 sudo port install htop
-sudo port install usbutils
-
-### usb pass thru
-
 ```
-lsusb
-Bus 004 Device 001: ID 8087:800a Intel Corp. 
-```
-
-### kivy setup
-
-https://kivy.org/doc/stable/guide/packaging-ios.html
-
-// sudo su
-
-port install autoconf
-port install automake
-port install libtool
-port install pkgconfig
-
-port install python38
-port install py38-pip
-port install py38-cython
-
-// no sudo
-
-pip install kivy-ios
-
-mkdir -p /tmp/build
-cd /tmp/build 
-toolchain build kivy

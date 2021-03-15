@@ -165,15 +165,15 @@ args=(
    
   -device ich9-ahci,id=sata
   
-  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
-  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
+  #-drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore-nopicker.qcow2"
+  -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file="$REPO_PATH/OpenCore-Catalina/OpenCore.qcow2"
   -device ide-hd,bus=sata.2,drive=OpenCoreBoot
   
   # skip: enabe only during reinstall
-  #-device ide-hd,bus=sata.3,drive=InstallMedia
-  #-drive id=InstallMedia,if=none,file="$install_media",format=raw
+  -device ide-hd,bus=sata.3,drive=InstallMedia
+  -drive id=InstallMedia,if=none,file="$install_media",format=raw
   
-  # provides configured system
+  # provides target system
   -drive id=MainDisk,if=none,file="$main_disk",format=raw
   -device ide-hd,bus=sata.4,drive=MainDisk
   
@@ -212,7 +212,7 @@ args=(
   # https://wiki.qemu.org/Documentation/9psetup
   # https://www.kraxel.org/blog/2019/06/macos-qemu-guest
   #-fsdev local,id=home_work,path=/home/work,security_model=mapped,dmode=0775,fmode=0664
-  -fsdev local,id=home_work,path=/home/work,security_model=none
+  -fsdev local,id=home_work,path=/home/work,security_model=none,readonly
   -device virtio-9p-pci,fsdev=home_work,mount_tag=HomeWork
 
   -monitor stdio
